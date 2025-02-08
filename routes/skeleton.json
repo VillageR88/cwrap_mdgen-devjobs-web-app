@@ -3,18 +3,73 @@
     "link": [
       {
         "rel": "shortcut icon",
-        "href": "favicon.ico",
+        "href": "{{return cwrapRoute !== '' ? '../' : './'}}favicon.ico",
         "type": "image/x-icon"
       }
     ]
   },
-  "fonts": [],
   "element": "body",
-  "style": "background-color: #0D192B; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Outfit', sans-serif, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
+  "style": "background-color: #F4F6F8; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Kumbh Sans', serif; margin: 0; min-height: 100dvh;",
   "children": [
     {
-      "element": "cwrap-template",
-      "text": "cwrapTemplate[helloMain]"
+      "element": "nav",
+      "style": "background-color: #5964E0; border-bottom-left-radius: 100px; height: 10.125em; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; box-sizing: border-box; display: flex; height: 32px; justify-content: space-between; margin-inline: auto; margin-top: 45px; max-width: 90rem; padding-inline: 39px; width: 100%;",
+          "children": [
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[logo]"
+            },
+            {
+              "element": "div",
+              "style": "align-items: center; display: flex; justify-content: space-between; max-width: 112px; min-height: 24px; width: 100%;",
+              "children": [
+                {
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[iconSun]"
+                },
+                {
+                  "element": "label",
+                  "style": "align-items: center; background-color: white; border-radius: 12px; cursor: pointer; display: flex; justify-content: center; max-width: 48px; min-height: 24px; width: 100%;",
+                  "children": [
+                    {
+                      "element": "input",
+                      "style": "appearance: none; background-color: #5964E0; border: none; border-radius: 50%; cursor: pointer; height: 14px; margin: 0; transform: translateX(-12px); transition: transform 300ms; width: 14px;",
+                      "attributes": {
+                        "type": "checkbox",
+                        "id": "theme-switcher"
+                      },
+                      "extend": [
+                        {
+                          "extension": ":checked",
+                          "style": "transform: translateX(12px);"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[iconMoon]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "main",
+      "children": []
+    },
+    {
+      "element": "script",
+      "attributes": {
+        "src": "static/scripts/main.js"
+      }
     }
   ]
 }

@@ -4,12 +4,7 @@
     "link": [
       {
         "rel": "stylesheet",
-        "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap",
-        "type": "text/css"
-      },
-      {
-        "rel": "stylesheet",
-        "href": "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap",
+        "href": "https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap",
         "type": "text/css"
       }
     ],
@@ -36,17 +31,6 @@
       "name": "@view-transition",
       "type": "custom",
       "style": "navigation: auto;"
-    },
-    {
-      "name": "h1",
-      "type": "element",
-      "mediaQueries": [
-        {
-          "query": "max-width: 640px",
-          "style": "font-size: 32px; line-height: 38px;"
-        }
-      ],
-      "style": "font-family: Rajdhani, serif; font-size: 48px; font-weight: 700; letter-spacing: 10px; line-height: 48px; margin: 0; text-align: center; white-space: pre-wrap;"
     }
   ],
   "const": {

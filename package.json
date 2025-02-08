@@ -1,11 +1,11 @@
 {
-  "name": "cwrap_ai_beta-devjobs-web-app",
+  "name": "cwrap_mdgen-devjobs-web-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
     "dev": "node cleanup.js dev && node build.js dev && node start.js dev && node server.js dev",
-    "convert-svg": "node converter/svgToJson.js",
+    "convert-svg": "node tools/svgToJson.js",
     "compile:dev": "tsc -p tsconfig.dev.json",
     "compile:prod": "tsc -p tsconfig.prod.json"
   },
