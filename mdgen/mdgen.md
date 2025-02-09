@@ -54,7 +54,7 @@
 26. In `main.ts`, add logic to handle theme switching based on local storage and add an event listener to update local storage and perform root changes when the theme is switched.
 27. In `globals.json`, add a `root` pseudo-class with styles for `--main-background-color` and a separate block for `root.dark` class.
 28. In `skeleton.json`, update the `body` element's background color to use the `--main-background-color` variable.
-29. In `globals.json`, add a `body` element with a background-based transition style.
+29. In `globals.json`, add a `body,div` element with a background-based transition style.
 30. Add `padding-top: 44px;` to the first `div` inside the `nav` element.
 31. Ensure the `nav` element's background fills its container fully and never exceeds it by setting `background-size` to `cover`.
 32. Add `cursor: pointer;` to the `label` element inside the `nav`.
@@ -67,4 +67,9 @@
     - margin-inline: auto
     - margin-top: 119px
     - max-width: 69.375em
+    - width: 100%
+37. Add an `extend` key to the `div` element inside the `main` element with the following styles:
+    - background-color: var(--main-background-color2)
+    - max-width: 350px
+    - min-height: 228px
     - width: 100%
