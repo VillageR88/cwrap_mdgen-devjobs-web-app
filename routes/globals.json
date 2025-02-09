@@ -31,6 +31,21 @@
       "name": "@view-transition",
       "type": "custom",
       "style": "navigation: auto;"
+    },
+    {
+      "name": "body",
+      "type": "element",
+      "style": "transition: background-color 300ms;"
+    },
+    {
+      "name": "root",
+      "type": "pseudo:",
+      "style": "--main-background-color: #F4F6F8;"
+    },
+    {
+      "name": "root.dark",
+      "type": "pseudo:",
+      "style": "--main-background-color: #121721;"
     }
   ],
   "const": {

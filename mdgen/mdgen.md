@@ -50,3 +50,7 @@
 23. Update the `input` element inside the `label` to have an `id` attribute with the value `theme-switcher`.
 24. Ensure the `input` element inside the `label` has a `type` attribute with the value `checkbox`.
 25. Add a `script` element as a child of the `body` element, just after the `main` element, with the `src` attribute set to `static/scripts/main.js`.
+26. In `main.ts`, add logic to handle theme switching based on local storage and add an event listener to update local storage and perform root changes when the theme is switched.
+27. In `globals.json`, add a `root` pseudo-class with styles for `--main-background-color` and a separate block for `root.dark` class.
+28. In `skeleton.json`, update the `body` element's background color to use the `--main-background-color` variable.
+29. In `globals.json`, add a `body` element with a background-based transition style.
