@@ -30,7 +30,7 @@ const scriptTag = document.querySelector(
 ) as HTMLScriptElement;
 const dataRoute = scriptTag.getAttribute("data-route");
 const main = document.querySelector("main") as HTMLElement;
-const mainInner = main.querySelector("div") as HTMLElement;
+const mainInner = main.querySelector("ul") as HTMLUListElement;
 
 if (theme === "dark") {
 	themeSwitcher.checked = true;
@@ -58,7 +58,49 @@ async function fetchData() {
 	const data: DataJson[] = await response.json();
 	for (const item of data) {
 		item.logo = item.logo.replace("./assets", "static/images");
-		const itemContainer = document.createElement("div");
+		const itemContainer = document.createElement("li");
+		const itemContainerInner = document.createElement("div");
+		const itemContainerInner1stRow = document.createElement("div");
+
+		const postedAt = document.createElement("p");
+		postedAt.textContent = item.postedAt;
+		itemContainerInner1stRow.appendChild(postedAt);
+
+		const separator = document.createElement("span");
+		separator.textContent = "•";
+		itemContainerInner1stRow.appendChild(separator);
+
+		const contract = document.createElement("p");
+		contract.textContent = item.contract;
+		itemContainerInner1stRow.appendChild(contract);
+
+		itemContainerInner.appendChild(itemContainerInner1stRow);
+
+		const position = document.createElement("h2");
+		position.textContent = item.position;
+		itemContainerInner.appendChild(position);
+
+		const company = document.createElement("p");
+		company.textContent = item.company;
+		itemContainerInner.appendChild(company);
+
+		const location = document.createElement("p");
+		location.textContent = item.location;
+		itemContainerInner.appendChild(location);
+
+		const logoBackgroundDiv = document.createElement("div");
+		logoBackgroundDiv.style.backgroundColor = item.logoBackground;
+
+		const logoImg = document.createElement("img");
+		logoImg.setAttribute("src", item.logo);
+		logoBackgroundDiv.appendChild(logoImg);
+
+		itemContainerInner.insertBefore(
+			logoBackgroundDiv,
+			itemContainerInner.firstChild,
+		);
+
+		itemContainer.appendChild(itemContainerInner);
 		mainInner.appendChild(itemContainer);
 	}
 	console.log(data);

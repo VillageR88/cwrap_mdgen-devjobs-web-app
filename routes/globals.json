@@ -40,12 +40,22 @@
     {
       "name": "root",
       "type": "pseudo:",
-      "style": "--main-background-color: #F4F6F8; --main-background-color2: white;"
+      "style": "--main-background-color: #F4F6F8; --main-background-color2: white; --main-h2-color: #19202D;"
     },
     {
       "name": "root.dark",
       "type": "pseudo:",
-      "style": "--main-background-color: #121721; --main-background-color2: #19202D; color-scheme: dark;"
+      "style": "--main-background-color: #121721; --main-background-color2: #19202D; --main-h2-color: white; color-scheme: dark;"
+    },
+    {
+      "name": "p,span,h2",
+      "type": "element",
+      "style": "margin: 0; transition: color 300ms;"
+    },
+    {
+      "name": "ul,li",
+      "type": "element",
+      "style": "box-sizing: border-box; list-style: none; margin: 0; padding: 0;"
     }
   ],
   "const": {

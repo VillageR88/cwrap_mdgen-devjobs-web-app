@@ -61,15 +61,32 @@
 33. Fetch data from `static/data.json` in `main.ts` and log it to the console.
 34. Replace `./assets` with `static/images` in the `logo` field for each item in the fetched data.
 35. Add a constant `main` to query the main element in `main.ts`.
-36. Add a `div` element as a child of the `main` element with the following styles:
+36. Add a `ul` element as a child of the `main` element with the following styles:
     - display: flex
-    - flex-direction: column
+    - flex-direction: row
+    - flex-wrap: wrap
+    - gap: 65px 30px
     - margin-inline: auto
     - margin-top: 119px
     - max-width: 69.375em
     - width: 100%
-37. Add an `extend` key to the `div` element inside the `main` element with the following styles:
+37. Add an `extend` key to the `ul` element inside the `main` element with the following styles:
     - background-color: var(--main-background-color2)
     - max-width: 350px
     - min-height: 228px
     - width: 100%
+    - border-radius: 6px
+    - box-sizing: border-box
+    - display: flex
+    - flex-direction: column
+    - height: 100%
+    - padding: 49px 32px 32px 32px
+    - position: relative
+38. Create `itemContainerInner1stRow` which is a `div` and append it as the first child of `itemContainerInner`.
+39. Create `p` elements for `postedAt` and `contract`, and a `span` element as a separator, then append them to `itemContainerInner1stRow`.
+40. Add a `p,span,h2` element to the `classroom` with the style `margin: 0`.
+41. Add an `h2` element with `item.position` as text content to `itemContainerInner`.
+42. Add another extension `> li > div > h2` with the styles `font-weight: bold`, `font-size: 20px`, `color: #19202D`, and `margin-top: 13px`.
+43. Insert a `div` element as the first child of `itemContainerInner` and set its background color to `item.logoBackground`.
+44. Update the common part `> li > div > div` to `> li > div > div:nth-of-type(2)` in the specified extensions.
+45. Add an extension `> li > div > div:nth-of-type(1)` with the styles `position: absolute`, `top: -25px`, `width: 50px`, `height: 50px`, and `border-radius: 15px`.
