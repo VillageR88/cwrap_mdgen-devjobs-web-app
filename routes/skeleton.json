@@ -17,7 +17,7 @@
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; box-sizing: border-box; display: flex; height: 32px; justify-content: space-between; margin-inline: auto; margin-top: 45px; max-width: 90rem; padding-inline: 39px; width: 100%;",
+          "style": "background: url('static/images/desktop/bg-pattern-header.svg') left no-repeat; background-color: #5964E0; background-size: cover; border-bottom-left-radius: 100px; box-sizing: border-box; display: flex; height: 100%; justify-content: space-between; margin-inline: auto; max-width: 90rem; padding-inline: 165px; padding-top: 44px; width: 100%;",
           "children": [
             {
               "element": "cwrap-template",
@@ -25,7 +25,7 @@
             },
             {
               "element": "div",
-              "style": "align-items: center; display: flex; justify-content: space-between; max-width: 112px; min-height: 24px; width: 100%;",
+              "style": "align-items: center; display: flex; height: fit-content; justify-content: space-between; max-width: 112px; min-height: 24px; width: 100%;",
               "children": [
                 {
                   "element": "cwrap-template",
@@ -33,7 +33,7 @@
                 },
                 {
                   "element": "label",
-                  "style": "align-items: center; background-color: white; border-radius: 12px; cursor: pointer; display: flex; justify-content: center; max-width: 48px; min-height: 24px; width: 100%;",
+                  "style": "align-items: center; background-color: white; border-radius: 12px; cursor: pointer; display: flex; height: fit-content; justify-content: center; max-width: 48px; min-height: 24px; width: 100%;",
                   "children": [
                     {
                       "element": "input",
@@ -68,7 +68,7 @@
     {
       "element": "script",
       "attributes": {
-        "src": "static/scripts/main.js"
+        "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/main.js"
       }
     }
   ]

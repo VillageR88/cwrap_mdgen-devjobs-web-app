@@ -27,6 +27,7 @@
     - max-width: 112px
     - min-height: 24px
     - width: 100%
+    - height: fit-content
 15. (Manually resolved Copy `icon-moon.svg` from the `images` folder in `static` and paste it in the `converter` folder in the root directory).
 16. (Manually resolved Copy `icon-sun.svg` from the `images` folder in `static` and paste it in the `converter` folder in the root directory).
 17. (Manually resolved running `npm run convert-svg` because it couldn't be done automatically).
@@ -54,3 +55,6 @@
 27. In `globals.json`, add a `root` pseudo-class with styles for `--main-background-color` and a separate block for `root.dark` class.
 28. In `skeleton.json`, update the `body` element's background color to use the `--main-background-color` variable.
 29. In `globals.json`, add a `body` element with a background-based transition style.
+30. Add `padding-top: 44px;` to the first `div` inside the `nav` element.
+31. Ensure the `nav` element's background fills its container fully and never exceeds it by setting `background-size` to `cover`.
+32. Add `cursor: pointer;` to the `label` element inside the `nav`.
