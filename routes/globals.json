@@ -45,7 +45,7 @@
     {
       "name": "root.dark",
       "type": "pseudo:",
-      "style": "--main-background-color: #121721; --main-background-color2: #19202D;"
+      "style": "--main-background-color: #121721; --main-background-color2: #19202D; color-scheme: dark;"
     }
   ],
   "const": {
