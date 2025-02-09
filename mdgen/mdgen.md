@@ -58,3 +58,13 @@
 30. Add `padding-top: 44px;` to the first `div` inside the `nav` element.
 31. Ensure the `nav` element's background fills its container fully and never exceeds it by setting `background-size` to `cover`.
 32. Add `cursor: pointer;` to the `label` element inside the `nav`.
+33. Fetch data from `static/data.json` in `main.ts` and log it to the console.
+34. Replace `./assets` with `static/images` in the `logo` field for each item in the fetched data.
+35. Add a constant `main` to query the main element in `main.ts`.
+36. Add a `div` element as a child of the `main` element with the following styles:
+    - display: flex
+    - flex-direction: column
+    - margin-inline: auto
+    - margin-top: 119px
+    - max-width: 69.375em
+    - width: 100%

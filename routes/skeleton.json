@@ -63,12 +63,18 @@
     },
     {
       "element": "main",
-      "children": []
+      "children": [
+        {
+          "element": "div",
+          "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 119px; max-width: 69.375em; width: 100%;"
+        }
+      ]
     },
     {
       "element": "script",
       "attributes": {
-        "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/main.js"
+        "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/main.js",
+        "data-route": "{{return cwrapRoute;}}"
       }
     }
   ]
