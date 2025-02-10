@@ -97,7 +97,10 @@ function displayItems(data: DataJson[]) {
 		itemContainerInner.appendChild(itemContainerInner1stRow);
 
 		const position = document.createElement("h2");
-		position.textContent = item.position;
+		const positionLink = document.createElement("a");
+		positionLink.textContent = item.position;
+		positionLink.href = `details/?id=${item.id}`;
+		position.appendChild(positionLink);
 		itemContainerInner.appendChild(position);
 
 		const company = document.createElement("p");

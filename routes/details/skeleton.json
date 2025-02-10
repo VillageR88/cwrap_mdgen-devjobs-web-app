@@ -13,65 +13,7 @@
   "passover": [
     {
       "element": "main",
-      "style": "display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;",
-      "children": [
-        {
-          "element": "ul",
-          "style": "display: grid; gap: 65px 30px; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-inline: auto; margin-top: 119px; max-width: 69.375em; width: 100%;",
-          "extend": [
-            {
-              "extension": "> li",
-              "style": "background-color: var(--main-background-color2); border-radius: 6px; min-height: 228px; width: 100%;"
-            },
-            {
-              "extension": "> li > div",
-              "style": "box-sizing: border-box; display: flex; flex-direction: column; height: 100%; padding: 49px 32px 32px 32px; position: relative; width: 100%;"
-            },
-            {
-              "extension": "> li > div > div:nth-of-type(1)",
-              "style": "align-items: center; border-radius: 15px; display: flex; height: 50px; justify-content: center; position: absolute; top: -25px; width: 50px;"
-            },
-            {
-              "extension": "> li > div > div:nth-of-type(2)",
-              "style": "align-items: center; display: flex; gap: 10px;"
-            },
-            {
-              "extension": "> li > div > div:nth-of-type(2) > p",
-              "style": "color: #6E8098; font-size: 16px;"
-            },
-            {
-              "extension": "> li > div > div:nth-of-type(2) > span",
-              "style": "color: #6E8098; font-size: 24px; font-weight: bold;"
-            },
-            {
-              "extension": "> li > div > h2",
-              "style": "color: var(--main-h2-color); font-size: 20px; font-weight: bold; margin-top: 9px;"
-            },
-            {
-              "extension": "> li > div > p:nth-of-type(1)",
-              "style": "color: #6E8098; font-size: 16px; margin-top: 13px;"
-            },
-            {
-              "extension": "> li > div > p:nth-of-type(2)",
-              "style": "color: #5964E0; font-size: 14px; font-weight: bold; margin-top: auto;"
-            }
-          ]
-        },
-        {
-          "element": "button",
-          "text": "Load More",
-          "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 141px; min-height: 48px; width: 100%;",
-          "attributes": {
-            "id": "load-more"
-          },
-          "extend": [
-            {
-              "extension": ":hover",
-              "style": "background-color: #939BF4;"
-            }
-          ]
-        }
-      ]
+      "style": "display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;"
     }
   ]
 }

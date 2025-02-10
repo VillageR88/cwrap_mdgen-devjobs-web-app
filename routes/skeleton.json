@@ -48,6 +48,10 @@
               "style": "color: var(--main-h2-color); font-size: 20px; font-weight: bold; margin-top: 9px;"
             },
             {
+              "extension": "> li > div > h2:hover",
+              "style": "color: #6E8098;"
+            },
+            {
               "extension": "> li > div > p:nth-of-type(1)",
               "style": "color: #6E8098; font-size: 16px; margin-top: 13px;"
             },

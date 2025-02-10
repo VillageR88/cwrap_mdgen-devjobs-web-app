@@ -53,9 +53,24 @@
       "style": "margin: 0; transition: color 300ms;"
     },
     {
+      "name": "a",
+      "type": "element",
+      "style": "color: unset; text-decoration: none;"
+    },
+    {
       "name": "ul,li",
       "type": "element",
       "style": "box-sizing: border-box; list-style: none; margin: 0; padding: 0;"
+    },
+    {
+      "name": "input::placeholder",
+      "type": "element",
+      "style": "color: rgba(25, 32, 45, 0.5); transition: color 300ms;"
+    },
+    {
+      "name": "root.dark input::placeholder",
+      "type": "pseudo:",
+      "style": "color: rgba(255, 255, 255, 0.5);"
     }
   ],
   "const": {
