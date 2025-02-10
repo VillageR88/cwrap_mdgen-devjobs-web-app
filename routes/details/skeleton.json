@@ -13,7 +13,13 @@
   "passover": [
     {
       "element": "main",
-      "style": "display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;"
+      "style": "display: flex; flex-direction: column; gap: 56px; margin-top: 131px; padding-bottom: 104px; padding-inline: 39px;",
+      "children": [
+        {
+          "element": "div",
+          "style": "margin-inline: auto; max-width: 69.375em; width: 100%;"
+        }
+      ]
     }
   ]
 }

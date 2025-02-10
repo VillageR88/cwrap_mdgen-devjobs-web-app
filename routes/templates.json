@@ -138,7 +138,7 @@
                                     },
                                     {
                                         "element": "cwrap-template",
-                                        "text": "cwrapTemplate[{{return cwrapRoute !== 'details' ? 'navSearch' : 'cwrapOmit'}}]"
+                                        "text": "cwrapTemplate[{{return cwrapRoute !== 'details' ? 'navSearch' : 'navCompany'}}]"
                                     }
                                 ]
                             }
@@ -251,7 +251,7 @@
                     },
                     {
                         "element": "p",
-                        "style": "font-weight: bold;",
+                        "style": "font-weight: bold; color: var(--main-h2-color);",
                         "text": "Full Time Only"
                     }
                 ]
@@ -267,6 +267,51 @@
                     {
                         "extension": ":hover",
                         "style": "background-color: #939BF4;"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "element": "div",
+        "name": "navCompany",
+        "style": "align-items: stretch; background-color: var(--main-background-color2); border-radius: 0 6px 6px 6px; bottom: -99px; box-sizing: border-box; display: flex; min-height: 140px;  position: absolute; width: calc(100% - 4.9em);",
+        "attributes": {
+            "id": "nav-company"
+        },
+        "children": [
+            {
+                "element": "div",
+                "style": "align-items: center; justify-content: center; display: flex; max-width: 140px; width: 100%;  border-radius: 0 0 0 6px; transition: unset;",
+                "children": [
+                    {
+                        "element": "img",
+                        "style": "transform: scale(2);"
+                    }
+                ]
+            },
+            {
+                "element": "div",
+                "style": "display: flex; flex-direction: column; gap: 13px; align-self: center; margin-inline: 40px;",
+                "children": [
+                    {
+                        "element": "h2",
+                        "style": "color: var(--main-h2-color);"
+                    },
+                    {
+                        "element": "p",
+                        "style": "color: #6E8098;"
+                    }
+                ]
+            },
+            {
+                "element": "button",
+                "text": "Company Site",
+                "style": "max-width: 147px; width: 100%; min-height: 48px; background-color: var(--main-background-color3); align-self: center; border-radius: 5px; display: flex; justify-content: center; align-items: center; margin-left: auto; margin-right: 43px; transition: background-color 300ms, color 300ms; font-weight: bold; color: var(--main-text-color2); cursor: pointer; border: none; font-family: 'Kumbh Sans', serif; font-size: 16px;",
+                "extend": [
+                    {
+                        "extension": ":hover",
+                        "style": "background-color: var(--main-background-color3-hover);"
                     }
                 ]
             }
