@@ -254,7 +254,13 @@
             {
                 "element": "script",
                 "attributes": {
-                    "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/main.js",
+                    "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/theme.js"
+                }
+            },
+            {
+                "element": "script",
+                "attributes": {
+                    "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/{{console.log(cwrapRoute);return cwrapRoute !== 'details' ? 'main' : 'details'}}.js",
                     "data-route": "{{return cwrapRoute;}}"
                 }
             }
