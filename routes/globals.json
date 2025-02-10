@@ -24,6 +24,11 @@
         "name": "keywords",
         "content": ""
       }
+    ],
+    "script": [
+      {
+        "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/theme.js"
+      }
     ]
   },
   "classroom": [
@@ -40,7 +45,7 @@
     {
       "name": "root",
       "type": "pseudo:",
-      "style": "--input-background-color: rgba(25, 32, 45, 0.1); --main-background-color: #F4F6F8; --main-background-color2: white; --main-h2-color: #19202D;"
+      "style": "--input-background-color: rgba(25, 32, 45, 0.1); --main-background-color: #F4F6F8; --main-background-color2: white; --main-h2-color: #19202D; display: none;"
     },
     {
       "name": "root.dark",

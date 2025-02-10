@@ -158,6 +158,7 @@
             {
                 "element": "script",
                 "attributes": {
+                    "type": "module",
                     "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/scripts/{{return cwrapRoute.includes('details') ? 'details' : 'main'}}.js",
                     "data-route": "{{return cwrapRoute;}}"
                 }

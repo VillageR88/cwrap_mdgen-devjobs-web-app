@@ -1,24 +1,33 @@
-const themeSwitcher = document.getElementById(
-	"theme-switcher",
-) as HTMLInputElement;
-const root = document.documentElement;
-const theme = localStorage.getItem("theme");
+document.addEventListener("DOMContentLoaded", () => {
+	const themeSwitcher = document.getElementById(
+		"theme-switcher",
+	) as HTMLInputElement;
+	const rootElement = document.documentElement;
 
-if (theme === "dark") {
-	themeSwitcher.checked = true;
-	root.classList.add("dark");
-} else {
-	root.classList.add("light");
-}
+	// Function to apply the theme
+	const applyTheme = (theme: string | null) => {
+		if (theme === "dark") {
+			rootElement.classList.add("dark");
+			themeSwitcher.checked = true;
+		} else {
+			rootElement.classList.remove("dark");
+			themeSwitcher.checked = false;
+		}
+		rootElement.style.display = "unset";
+	};
 
-themeSwitcher.addEventListener("change", () => {
-	if (themeSwitcher.checked) {
-		root.classList.remove("light");
-		root.classList.add("dark");
-		localStorage.setItem("theme", "dark");
-	} else {
-		root.classList.remove("dark");
-		root.classList.add("light");
-		localStorage.setItem("theme", "light");
-	}
+	// Apply the saved theme on load
+	const savedTheme = localStorage.getItem("theme");
+	applyTheme(savedTheme);
+
+	// Toggle theme on switch
+	themeSwitcher.addEventListener("change", () => {
+		if (themeSwitcher.checked) {
+			localStorage.setItem("theme", "dark");
+			applyTheme("dark");
+		} else {
+			localStorage.removeItem("theme");
+			applyTheme(null);
+		}
+	});
 });
