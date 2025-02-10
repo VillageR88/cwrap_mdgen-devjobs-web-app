@@ -38,10 +38,16 @@
                     {
                       "element": "label",
                       "style": "align-items: center; background-color: white; border-radius: 12px; cursor: pointer; display: flex; height: fit-content; justify-content: center; max-width: 48px; min-height: 24px; width: 100%;",
+                      "extend": [
+                        {
+                          "extension": ":hover > input:nth-of-type(1)",
+                          "style": "background-color: #939BF4;"
+                        }
+                      ],
                       "children": [
                         {
                           "element": "input",
-                          "style": "appearance: none; background-color: #5964E0; border: none; border-radius: 50%; cursor: pointer; height: 14px; margin: 0; transform: translateX(-12px); transition: transform 300ms; width: 14px;",
+                          "style": "appearance: none; background-color: #5964E0; border: none; border-radius: 50%; cursor: pointer; height: 14px; margin: 0; transform: translateX(-12px); transition: transform 300ms, background-color 300ms; width: 14px;",
                           "attributes": {
                             "type": "checkbox",
                             "id": "theme-switcher"
@@ -63,7 +69,106 @@
                 },
                 {
                   "element": "div",
-                  "style": "background-color: var(--main-background-color2); border-radius: 6px; bottom: -40px; min-height: 80px; position: absolute; width: calc(100% - 4.9em);"
+                  "style": "align-items: stretch; background-color: var(--main-background-color2); border-radius: 6px; bottom: -40px; box-sizing: border-box; display: flex; min-height: 80px; padding-inline: 32px 16px; position: absolute; width: calc(100% - 4.9em);",
+                  "children": [
+                    {
+                      "element": "label",
+                      "style": "align-items: center; display: flex; gap: 16px; max-width: 463px; width: 100%;",
+                      "children": [
+                        {
+                          "element": "img",
+                          "attributes": {
+                            "src": "static/images/desktop/icon-search.svg"
+                          }
+                        },
+                        {
+                          "element": "input",
+                          "style": "background-color: transparent; border: none; box-sizing: border-box; caret-color: #5964E0; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: 400; margin-right: 16px; outline: none; width: 100%;",
+                          "attributes": {
+                            "id": "search-item",
+                            "placeholder": "Filter by title, companies, expertise…",
+                            "autocomplete": "off"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "element": "label",
+                      "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 302px; padding-left: 23px; width: 100%;",
+                      "children": [
+                        {
+                          "element": "img",
+                          "attributes": {
+                            "src": "static/images/desktop/icon-location.svg"
+                          }
+                        },
+                        {
+                          "element": "input",
+                          "style": "background-color: transparent; border: none; box-sizing: border-box; caret-color: #5964E0; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: 400; margin-right: 16px; outline: none; width: 100%;",
+                          "attributes": {
+                            "id": "search-location",
+                            "placeholder": "Filter by location…",
+                            "autocomplete": "off"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "element": "label",
+                      "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 206px; padding-left: 32px; width: 100%;",
+                      "extend": [
+                        {
+                          "extension": ":has(input:checked) > div",
+                          "style": "background-color: #5964E0;"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "element": "div",
+                          "style": "align-items: center; background-color: var(--input-background-color); border-radius: 3px; display: flex; height: 24px; justify-content: center; min-width: 24px; position: relative;",
+                          "extend": [
+                            {
+                              "extension": ":has(input:checked) > img",
+                              "style": "opacity: 1;"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "element": "input",
+                              "style": "opacity: 0; position: absolute;",
+                              "attributes": {
+                                "type": "checkbox",
+                                "id": "full-time-only"
+                              }
+                            },
+                            {
+                              "element": "img",
+                              "style": "opacity: 0; transition: opacity 300ms;",
+                              "attributes": {
+                                "src": "static/images/desktop/icon-check.svg"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "element": "p",
+                          "style": "font-weight: bold;",
+                          "text": "Full Time Only"
+                        }
+                      ]
+                    },
+                    {
+                      "element": "button",
+                      "text": "Search",
+                      "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 123px; min-height: 48px; width: 100%;",
+                      "extend": [
+                        {
+                          "extension": ":hover",
+                          "style": "background-color: #939BF4;"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -73,7 +178,7 @@
     },
     {
       "element": "main",
-      "style": "padding-inline: 39px;",
+      "style": "display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;",
       "children": [
         {
           "element": "ul",
@@ -114,6 +219,20 @@
             {
               "extension": "> li > div > p:nth-of-type(2)",
               "style": "color: #5964E0; font-size: 14px; font-weight: bold; margin-top: auto;"
+            }
+          ]
+        },
+        {
+          "element": "button",
+          "text": "Load More",
+          "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 141px; min-height: 48px; width: 100%;",
+          "attributes": {
+            "id": "load-more"
+          },
+          "extend": [
+            {
+              "extension": ":hover",
+              "style": "background-color: #939BF4;"
             }
           ]
         }

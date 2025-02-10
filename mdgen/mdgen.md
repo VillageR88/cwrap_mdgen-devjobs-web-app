@@ -52,7 +52,16 @@
 24. Ensure the `input` element inside the `label` has a `type` attribute with the value `checkbox`.
 25. Add a `script` element as a child of the `body` element, just after the `main` element, with the `src` attribute set to `static/scripts/main.js`.
 26. In `main.ts`, add logic to handle theme switching based on local storage and add an event listener to update local storage and perform root changes when the theme is switched.
-27. In `globals.json`, add a `root` pseudo-class with styles for `--main-background-color` and a separate block for `root.dark` class.
+27. In `globals.json`, add a `root` pseudo-class with styles for `--main-background-color` and a separate block for `root.dark` class with the following styles:
+    - `--input-background-color: rgba(25, 32, 45, 0.1);`
+    - `--main-background-color: #F4F6F8;`
+    - `--main-background-color2: white;`
+    - `--main-h2-color: #19202D;`
+    - `--input-background-color: rgba(255,255,255,0.1);`
+    - `--main-background-color: #121721;`
+    - `--main-background-color2: #19202D;`
+    - `--main-h2-color: white;`
+    - `color-scheme: dark;`
 28. In `skeleton.json`, update the `body` element's background color to use the `--main-background-color` variable.
 29. In `globals.json`, add a `body,div` element with a background-based transition style.
 30. Add `padding-top: 44px;` to the first `div` inside the `nav` element.
@@ -88,3 +97,27 @@
 43. Insert a `div` element as the first child of `itemContainerInner` and set its background color to `item.logoBackground`.
 44. Update the common part `> li > div > div` to `> li > div > div:nth-of-type(2)` in the specified extensions.
 45. Add an extension `> li > div > div:nth-of-type(1)` with the styles `position: absolute`, `top: -25px`, `width: 50px`, `height: 50px`, and `border-radius: 15px`.
+46. Extend the 3rd label with the extension `:has(input:checked) > div` and add the style `background-color: #5964E0`.
+47. Update the `div` containing the `input` and `p` elements to have `min-width: 24px`, `height: 24px`, and `border-radius: 3px`.
+48. Update the first and second inputs to have `autocomplete="off"` and set the `Search` button to have `cursor: pointer`.
+49. Add an extension to the `Search` button for `:hover` with the style `background-color: #939BF4`.
+50. Add an extension to the theme switcher `label` for `:hover > input:nth-of-type(1)` with the style `background-color: #939BF4`.
+51. Add `transition: transform 300ms, background-color 300ms;` to the `input` element with `id="theme-switcher"`.
+52. Add `padding-bottom: 104px;` to the `main` element's style.
+53. Add a `button` element after the `ul` element inside the `main` element with the following styles:
+    - align-items: center
+    - align-self: center
+    - background-color: #5964E0
+    - border: none
+    - border-radius: 5px
+    - color: white
+    - cursor: pointer
+    - display: flex
+    - font-family: 'Kumbh Sans', serif
+    - font-size: 16px
+    - font-weight: bold
+    - justify-content: center
+    - max-width: 141px
+    - min-height: 48px
+    - width: 100%
+    - Add an extension for `:hover` with the style `background-color: #939BF4`

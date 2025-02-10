@@ -33,19 +33,19 @@
       "style": "navigation: auto;"
     },
     {
-      "name": "body,div",
+      "name": "body,div,ul,li,button",
       "type": "element",
-      "style": "transition: background-color 300ms;"
+      "style": "transition: background-color 300ms, border-color 300ms, fill-color 300ms;"
     },
     {
       "name": "root",
       "type": "pseudo:",
-      "style": "--main-background-color: #F4F6F8; --main-background-color2: white; --main-h2-color: #19202D;"
+      "style": "--input-background-color: rgba(25, 32, 45, 0.1); --main-background-color: #F4F6F8; --main-background-color2: white; --main-h2-color: #19202D;"
     },
     {
       "name": "root.dark",
       "type": "pseudo:",
-      "style": "--main-background-color: #121721; --main-background-color2: #19202D; --main-h2-color: white; color-scheme: dark;"
+      "style": "--input-background-color: rgba(255,255,255,0.1); --main-background-color: #121721; --main-background-color2: #19202D; --main-h2-color: white; color-scheme: dark;"
     },
     {
       "name": "p,span,h2",
