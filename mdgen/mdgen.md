@@ -121,3 +121,6 @@
     - min-height: 48px
     - width: 100%
     - Add an extension for `:hover` with the style `background-color: #939BF4`
+54. Copy the content of `skeleton.json` body exactly as it is into `templates.json` and add the key `name` with the value `"template"`.
+55. Add a `cwrap-passover` element to the `body` template in `templates.json`.
+56. Add a `cwrap-passover` element to the `skeleton.json` as the main element derived from the initial body template.
