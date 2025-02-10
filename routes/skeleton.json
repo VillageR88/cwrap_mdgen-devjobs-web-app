@@ -161,6 +161,9 @@
                       "element": "button",
                       "text": "Search",
                       "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 123px; min-height: 48px; width: 100%;",
+                      "attributes": {
+                        "id": "search"
+                      },
                       "extend": [
                         {
                           "extension": ":hover",

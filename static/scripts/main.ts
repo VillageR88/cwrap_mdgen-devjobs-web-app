@@ -31,6 +31,18 @@ const scriptTag = document.querySelector(
 const dataRoute = scriptTag.getAttribute("data-route");
 const main = document.querySelector("main") as HTMLElement;
 const mainInner = main.querySelector("ul") as HTMLUListElement;
+const loadMore = document.getElementById("load-more") as HTMLButtonElement;
+const searchItem = document.getElementById("search-item") as HTMLInputElement;
+const searchLocation = document.getElementById(
+	"search-location",
+) as HTMLInputElement;
+const fullTimeOnly = document.getElementById(
+	"full-time-only",
+) as HTMLInputElement;
+const search = document.getElementById("search") as HTMLButtonElement;
+
+let currentIndex = 0;
+const itemsPerPage = 12;
 
 if (theme === "dark") {
 	themeSwitcher.checked = true;
@@ -53,11 +65,43 @@ themeSwitcher.addEventListener("change", () => {
 
 console.log(dataRoute);
 
-async function fetchData() {
+search.addEventListener("click", () => {
+	const searchItemValue = searchItem.value.toLowerCase();
+	const searchLocationValue = searchLocation.value.toLowerCase();
+	const isFullTimeOnly = fullTimeOnly.checked;
+
+	fetchData().then((data) => {
+		const filteredData = data.filter((item) => {
+			const matchesSearchItem =
+				item.company.toLowerCase().includes(searchItemValue) ||
+				item.position.toLowerCase().includes(searchItemValue);
+			const matchesLocation = item.location
+				.toLowerCase()
+				.includes(searchLocationValue);
+			const matchesFullTimeOnly =
+				!isFullTimeOnly || item.contract.toLowerCase() === "full time";
+
+			return matchesSearchItem && matchesLocation && matchesFullTimeOnly;
+		});
+		mainInner.innerHTML = ""; // Clear previous results
+		currentIndex = 0; // Reset current index
+		displayItems(filteredData);
+	});
+});
+
+async function fetchData(): Promise<DataJson[]> {
 	const response = await fetch("static/data.json");
 	const data: DataJson[] = await response.json();
 	for (const item of data) {
 		item.logo = item.logo.replace("./assets", "static/images");
+	}
+	displayItems(data); // Display all items by default
+	return data;
+}
+
+function displayItems(data: DataJson[]) {
+	const itemsToDisplay = data.slice(currentIndex, currentIndex + itemsPerPage);
+	for (const item of itemsToDisplay) {
 		const itemContainer = document.createElement("li");
 		const itemContainerInner = document.createElement("div");
 		const itemContainerInner1stRow = document.createElement("div");
@@ -103,7 +147,14 @@ async function fetchData() {
 		itemContainer.appendChild(itemContainerInner);
 		mainInner.appendChild(itemContainer);
 	}
-	console.log(data);
+	currentIndex += itemsPerPage;
+	if (currentIndex >= data.length) {
+		loadMore.style.display = "none";
+	} else {
+		loadMore.style.display = "block";
+	}
 }
 
-fetchData();
+fetchData().then((data) => {
+	loadMore.addEventListener("click", () => displayItems(data));
+});
