@@ -17,7 +17,194 @@
       "children": [
         {
           "element": "div",
-          "style": "margin-inline: auto; max-width: 69.375em; width: 100%;"
+          "style": "background-color: var(--main-background-color2); box-sizing: border-box; margin-inline: auto; max-width: 69.375em; padding: 48px 43px 48px 48px; width: 100%;",
+          "children": [
+            {
+              "element": "div",
+              "style": "align-items: center; display: flex; justify-content: space-between; min-height: 87px;",
+              "children": [
+                {
+                  "element": "div",
+                  "style": "display: flex; flex-direction: column;",
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "align-items: center; display: flex; gap: 10px;",
+                      "children": [
+                        {
+                          "element": "p",
+                          "style": "color: #6E8098; font-size: 16px;",
+                          "attributes": {
+                            "id": "posted-at"
+                          }
+                        },
+                        {
+                          "element": "span",
+                          "text": "•",
+                          "style": "color: #6E8098; font-size: 24px; font-weight: bold;"
+                        },
+                        {
+                          "element": "p",
+                          "style": "color: #6E8098; font-size: 16px;",
+                          "attributes": {
+                            "id": "contract"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "element": "h2",
+                      "style": "color: var(--main-h2-color); font-size: 28px; font-weight: bold; margin-top: 4px;",
+                      "attributes": {
+                        "id": "position"
+                      }
+                    },
+                    {
+                      "element": "p",
+                      "style": "color: #5964E0; font-size: 14px; font-weight: bold; margin-top: 13px;",
+                      "attributes": {
+                        "id": "location"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "element": "button",
+                  "text": "Apply Now",
+                  "style": "background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; font-family: 'Kumbh Sans', sans-serif; font-size: 16px; font-weight: bold; max-width: 141px; min-height: 48px; width: 100%;",
+                  "extend": [
+                    {
+                      "extension": ":hover",
+                      "style": "background-color: #939BF4;"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "p",
+              "style": "color: var(--main-text-color4); font-size: 16px; line-height: 26px; margin-top: 40px;",
+              "attributes": {
+                "id": "description"
+              }
+            },
+            {
+              "element": "div",
+              "style": "margin-top: 40px;",
+              "children": [
+                {
+                  "element": "h3",
+                  "text": "Requirements",
+                  "style": "color: var(--main-h2-color);"
+                },
+                {
+                  "element": "p",
+                  "style": "color: var(--main-text-color4); font-size: 16px; line-height: 26px; margin-top: 23px;",
+                  "attributes": {
+                    "id": "requirements-content"
+                  }
+                },
+                {
+                  "element": "ul",
+                  "style": "color: var(--main-text-color4); display: flex; flex-direction: column; font-size: 16px; gap: 8px; line-height: 26px; list-style: none; margin-top: 24px;",
+                  "attributes": {
+                    "id": "requirements-items-container"
+                  },
+                  "extend": [
+                    {
+                      "extension": "> li",
+                      "style": "padding-left: 35px; position: relative;"
+                    },
+                    {
+                      "extension": "> li::before",
+                      "style": "color: #5964E0; content: '•'; font-size: 20px; font-weight: bold; left: 0; position: absolute;"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "style": "margin-top: 40px;",
+              "children": [
+                {
+                  "element": "h3",
+                  "text": "What You Will Do",
+                  "style": "color: var(--main-h2-color);"
+                },
+                {
+                  "element": "p",
+                  "style": "color: var(--main-text-color4); font-size: 16px; line-height: 26px; margin-top: 23px;",
+                  "attributes": {
+                    "id": "role-content"
+                  }
+                },
+                {
+                  "element": "ol",
+                  "style": "color: var(--main-text-color4); counter-reset: item; display: flex; flex-direction: column; font-size: 16px; gap: 8px; line-height: 26px; margin-top: 24px;",
+                  "attributes": {
+                    "id": "role-items-container"
+                  },
+                  "extend": [
+                    {
+                      "extension": "> li::before",
+                      "style": "color: #5964E0; content: counter(item); font-size: 16px; font-weight: bold; left: 0; position: absolute;"
+                    },
+                    {
+                      "extension": "> li",
+                      "style": "counter-increment: item; list-style: none; padding-left: 35px; position: relative;"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "footer",
+      "style": "background-color: var(--main-background-color2); margin-top: auto; min-height: 96px; transition: background-color 300ms;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; box-sizing: border-box; display: flex; justify-content: space-between; margin-inline: auto; max-width: 69.375em; padding: 24px 48px; width: 100%;",
+          "children": [
+            {
+              "element": "section",
+              "style": "display: flex; flex-direction: column; gap: 12px;",
+              "children": [
+                {
+                  "element": "h2",
+                  "style": "color: var(--main-h2-color); font-size: 20px;",
+                  "attributes": {
+                    "id": "position-duplicate"
+                  }
+                },
+                {
+                  "element": "p",
+                  "style": "color: var(--main-text-color4); font-size: 16px;",
+                  "attributes": {
+                    "id": "company-duplicate"
+                  }
+                }
+              ]
+            },
+            {
+              "element": "button",
+              "text": "Apply Now",
+              "style": "background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; font-family: 'Kumbh Sans', sans-serif; font-size: 16px; font-weight: bold; max-width: 141px; min-height: 48px; width: 100%;",
+              "extend": [
+                {
+                  "extension": ":hover",
+                  "style": "background-color: #939BF4;",
+                  "attributes": {
+                    "id": "company-duplicate"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

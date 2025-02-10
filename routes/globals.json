@@ -45,15 +45,15 @@
     {
       "name": "root",
       "type": "pseudo:",
-      "style": "--input-background-color: rgba(25, 32, 45, 0.1); --main-background-color: #F4F6F8; --main-background-color2: white; --main-background-color3: rgba(89,100,224,0.1); --main-background-color3-hover: rgba(89,100,224,0.35); --main-h2-color: #19202D; --main-text-color2: #5964E0; display: none;"
+      "style": "--input-background-color: rgba(25, 32, 45, 0.1); --main-background-color: #F4F6F8; --main-background-color2: white; --main-background-color3: rgba(89,100,224,0.1); --main-background-color3-hover: rgba(89,100,224,0.35); --main-h2-color: #19202D; --main-text-color2: #5964E0; --main-text-color4: #6E8098; display: none;"
     },
     {
       "name": "root.dark",
       "type": "pseudo:",
-      "style": "--input-background-color: rgba(255,255,255,0.1); --main-background-color: #121721; --main-background-color2: #19202D; --main-background-color3: rgba(255,255,255,0.1); --main-background-color3-hover: rgba(255,255,255,0.25); --main-h2-color: white; --main-text-color2: white; color-scheme: dark;"
+      "style": "--input-background-color: rgba(255,255,255,0.1); --main-background-color: #121721; --main-background-color2: #19202D; --main-background-color3: rgba(255,255,255,0.1); --main-background-color3-hover: rgba(255,255,255,0.25); --main-h2-color: white; --main-text-color2: white; --main-text-color4: #9DAEC2; color-scheme: dark;"
     },
     {
-      "name": "p,span,h2",
+      "name": "p,span,h2,h3",
       "type": "element",
       "style": "margin: 0; transition: color 300ms;"
     },
@@ -63,7 +63,7 @@
       "style": "color: unset; text-decoration: none;"
     },
     {
-      "name": "ul,li",
+      "name": "ul,li,ol",
       "type": "element",
       "style": "box-sizing: border-box; list-style: none; margin: 0; padding: 0;"
     },
