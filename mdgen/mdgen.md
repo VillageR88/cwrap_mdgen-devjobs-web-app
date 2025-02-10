@@ -62,17 +62,15 @@
 34. Replace `./assets` with `static/images` in the `logo` field for each item in the fetched data.
 35. Add a constant `main` to query the main element in `main.ts`.
 36. Add a `ul` element as a child of the `main` element with the following styles:
-    - display: flex
-    - flex-direction: row
-    - flex-wrap: wrap
+    - display: grid
     - gap: 65px 30px
+    - grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
     - margin-inline: auto
     - margin-top: 119px
     - max-width: 69.375em
     - width: 100%
 37. Add an `extend` key to the `ul` element inside the `main` element with the following styles:
     - background-color: var(--main-background-color2)
-    - max-width: 350px
     - min-height: 228px
     - width: 100%
     - border-radius: 6px
