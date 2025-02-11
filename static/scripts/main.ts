@@ -16,6 +16,21 @@ const fullTimeOnly = document.getElementById(
 ) as HTMLInputElement;
 const search = document.getElementById("search") as HTMLButtonElement;
 
+const filterButton = document.getElementById("filter") as HTMLButtonElement;
+const asideElement = document.querySelector("aside") as HTMLElement;
+
+filterButton.addEventListener("click", () => {
+	if (asideElement.style.opacity === "1") {
+		asideElement.style.opacity = "0";
+		asideElement.style.userSelect = "none";
+		asideElement.style.pointerEvents = "none";
+	} else {
+		asideElement.style.opacity = "1";
+		asideElement.style.userSelect = "unset";
+		asideElement.style.pointerEvents = "unset";
+	}
+});
+
 let currentIndex = 0;
 const itemsPerPage = 12;
 
