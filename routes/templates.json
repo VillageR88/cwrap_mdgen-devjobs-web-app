@@ -230,94 +230,12 @@
                 ]
             },
             {
-                "element": "label",
-                "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 302px; padding-left: 23px; width: 100%;",
-                "mediaQueries": [
-                    {
-                        "query": "max-width: 768px",
-                        "style": "display: none;"
-                    }
-                ],
-                "children": [
-                    {
-                        "element": "img",
-                        "attributes": {
-                            "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/icon-location.svg"
-                        }
-                    },
-                    {
-                        "element": "input",
-                        "style": "background-color: transparent; border: none; box-sizing: border-box; caret-color: #5964E0; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: 400; margin-right: 16px; outline: none; width: 100%;",
-                        "attributes": {
-                            "id": "search-location",
-                            "placeholder": "Filter by location…",
-                            "style": "text-overflow: ellipsis; white-space: nowrap; overflow: hidden;",
-                            "autocomplete": "off"
-                        }
-                    }
-                ]
+                "element": "cwrap-template",
+                "text": "cwrapTemplate[searchLocation]"
             },
             {
-                "element": "label",
-                "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 206px; padding-left: 32px; width: 100%;",
-                "mediaQueries": [
-                    {
-                        "query": "max-width: 768px",
-                        "style": "display: none;"
-                    }
-                ],
-                "extend": [
-                    {
-                        "extension": ":has(input:checked) > div",
-                        "style": "background-color: #5964E0;"
-                    }
-                ],
-                "children": [
-                    {
-                        "element": "div",
-                        "style": "align-items: center; background-color: var(--input-background-color); border-radius: 3px; display: flex; height: 24px; justify-content: center; min-width: 24px; position: relative;",
-                        "extend": [
-                            {
-                                "extension": ":has(input:checked) > img",
-                                "style": "opacity: 1;"
-                            }
-                        ],
-                        "children": [
-                            {
-                                "element": "input",
-                                "style": "opacity: 0; position: absolute;",
-                                "attributes": {
-                                    "type": "checkbox",
-                                    "id": "full-time-only"
-                                }
-                            },
-                            {
-                                "element": "img",
-                                "style": "opacity: 0; transition: opacity 300ms;",
-                                "attributes": {
-                                    "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/icon-check.svg"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "element": "p",
-                        "style": "font-weight: bold; color: var(--main-h2-color);",
-                        "text": "Full Time cwrapSpan",
-                        "children": [
-                            {
-                                "element": "span",
-                                "text": "Only",
-                                "mediaQueries": [
-                                    {
-                                        "query": "max-width: 1024px",
-                                        "style": "display: none;"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                "element": "cwrap-template",
+                "text": "cwrapTemplate[fullTimeOnly]"
             },
             {
                 "element": "button",
@@ -401,6 +319,9 @@
                 "children": [
                     {
                         "element": "img",
+                        "attributes": {
+                            "alt": "company logo"
+                        },
                         "style": "transform: scale(2);",
                         "mediaQueries": [
                             {
@@ -493,6 +414,101 @@
                     "d": "M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z",
                     "fill-rule": "nonzero"
                 }
+            }
+        ]
+    },
+    {
+        "element": "label",
+        "name": "searchLocation",
+        "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 302px; padding-left: 23px; width: 100%;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[searchLocation768Style=display: none;]"
+            }
+        ],
+        "children": [
+            {
+                "element": "img",
+                "attributes": {
+                    "alt": "search icon",
+                    "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/icon-location.svg"
+                }
+            },
+            {
+                "element": "input",
+                "style": "background-color: transparent; border: none; box-sizing: border-box; caret-color: #5964E0; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: 400; margin-right: 16px; outline: none; width: 100%;",
+                "attributes": {
+                    "id": "cwrapProperty[searchLocationId=search-location]",
+                    "placeholder": "Filter by location…",
+                    "style": "text-overflow: ellipsis; white-space: nowrap; overflow: hidden;",
+                    "autocomplete": "off"
+                }
+            }
+        ]
+    },
+    {
+        "element": "label",
+        "name": "fullTimeOnly",
+        "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 206px; padding-left: 32px; width: 100%;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[fullTimeOnly768Style=display: none];"
+            }
+        ],
+        "extend": [
+            {
+                "extension": ":has(input:checked) > div",
+                "style": "background-color: #5964E0;"
+            }
+        ],
+        "children": [
+            {
+                "element": "div",
+                "style": "align-items: center; background-color: var(--input-background-color); border-radius: 3px; display: flex; height: 24px; justify-content: center; min-width: 24px; position: relative;",
+                "extend": [
+                    {
+                        "extension": ":has(input:checked) > img",
+                        "style": "opacity: 1;"
+                    }
+                ],
+                "children": [
+                    {
+                        "element": "input",
+                        "style": "opacity: 0; position: absolute;",
+                        "attributes": {
+                            "type": "checkbox",
+                            "id": "cwrapProperty[fullTimeOnlyId=full-time-only]"
+                        }
+                    },
+                    {
+                        "element": "img",
+                        "style": "opacity: 0; transition: opacity 300ms;",
+                        "attributes": {
+                            "alt": "check icon",
+                            "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/icon-check.svg"
+                        }
+                    }
+                ]
+            },
+            {
+                "element": "p",
+                "style": "font-weight: bold; color: var(--main-h2-color); display: flex;",
+                "text": "Full Time cwrapSpan",
+                "children": [
+                    {
+                        "element": "span",
+                        "text": "Only",
+                        "style": "margin-left: 3px;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 1024px",
+                                "style": "cwrapProperty[spanAppend=display: none;]"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

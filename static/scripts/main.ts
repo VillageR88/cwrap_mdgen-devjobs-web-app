@@ -16,6 +16,16 @@ const fullTimeOnly = document.getElementById(
 ) as HTMLInputElement;
 const search = document.getElementById("search") as HTMLButtonElement;
 
+const searchLocationDuplicate = document.getElementById(
+	"search-location-duplicate",
+) as HTMLInputElement;
+const fullTimeOnlyDuplicate = document.getElementById(
+	"full-time-only-duplicate",
+) as HTMLInputElement;
+const searchDuplicate = document.getElementById(
+	"search-duplicate",
+) as HTMLButtonElement;
+
 const filterButton = document.getElementById("filter") as HTMLButtonElement;
 const asideElement = document.querySelector("aside") as HTMLElement;
 
@@ -41,6 +51,26 @@ search.addEventListener("click", () => {
 	const searchLocationValue = searchLocation.value.toLowerCase();
 	const isFullTimeOnly = fullTimeOnly.checked;
 
+	handleSearch(searchItemValue, searchLocationValue, isFullTimeOnly);
+});
+
+searchDuplicate.addEventListener("click", () => {
+	const searchItemValue = searchItem.value.toLowerCase();
+	const searchLocationValue = searchLocationDuplicate.value.toLowerCase();
+	const isFullTimeOnly = fullTimeOnlyDuplicate.checked;
+
+	handleSearch(searchItemValue, searchLocationValue, isFullTimeOnly);
+
+	// Trigger click on filter button
+	const filterButton = document.getElementById("filter") as HTMLButtonElement;
+	filterButton.click();
+});
+
+function handleSearch(
+	searchItemValue: string,
+	searchLocationValue: string,
+	isFullTimeOnly: boolean,
+) {
 	fetchData().then((data) => {
 		const filteredData = data.filter((item) => {
 			const matchesSearchItem =
@@ -58,7 +88,7 @@ search.addEventListener("click", () => {
 		currentIndex = 0; // Reset current index
 		displayItems(filteredData);
 	});
-});
+}
 
 async function fetchData(): Promise<DataJson[]> {
 	const response = await fetch("static/data.json");

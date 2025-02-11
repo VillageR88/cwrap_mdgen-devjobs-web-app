@@ -115,7 +115,40 @@
       "children": [
         {
           "element": "div",
-          "style": "background-color: var(--main-background-color2); border-radius: 6px; box-sizing: border-box; display: flex; flex-direction: column; min-height: 217px; padding: 24px; transition: background-color 300ms; width: 100%;"
+          "style": "background-color: var(--main-background-color2); border-radius: 6px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 217px; padding-block: 24px; transition: background-color 300ms; width: 100%;",
+          "children": [
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[searchLocation(searchLocation768Style=display: flex; border-left: none;  max-width: unset; padding-inline: 24px box-sizing: border-box;,searchLocationId=search-location-duplicate)]"
+            },
+            {
+              "element": "div",
+              "style": "border-bottom: 1px solid rgba(110,128,152,0.2); min-height: 1px; width: 100%;"
+            },
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[fullTimeOnly(fullTimeOnlyId=full-time-only-duplicate,fullTimeOnly768Style=display: flex; max-width: unset; padding-inline: 24px; box-sizing: border-box; border-left: none;,spanAppend=display: flex;))]"
+            },
+            {
+              "element": "button",
+              "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; box-sizing: border-box; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; min-height: 48px; width: calc(100% - 2em);",
+              "children": [
+                {
+                  "element": "span",
+                  "text": "Search"
+                }
+              ],
+              "attributes": {
+                "id": "search-duplicate"
+              },
+              "extend": [
+                {
+                  "extension": ":hover",
+                  "style": "background-color: #939BF4;"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
