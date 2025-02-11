@@ -14,6 +14,12 @@
     {
       "element": "main",
       "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "padding-inline: 24px;"
+        }
+      ],
       "children": [
         {
           "element": "ul",
@@ -63,7 +69,7 @@
           "mediaQueries": [
             {
               "query": "max-width: 1024px",
-              "style": "gap: 65px 20px;",
+              "style": "gap: 65px 20px; margin-top: 97px;",
               "extend": [
                 {
                   "extension": "> li",
@@ -102,6 +108,10 @@
           ]
         }
       ]
+    },
+    {
+      "element": "aside",
+      "style": "background-color: rgba(0,0,0,0.5); height: 100%; left: 0; opacity: 0; pointer-events: none; position: fixed; top: 0; user-select: none; width: 100%;"
     }
   ]
 }
