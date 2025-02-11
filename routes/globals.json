@@ -60,7 +60,7 @@
     {
       "name": "a",
       "type": "element",
-      "style": "color: unset; text-decoration: none;"
+      "style": "color: unset; margin: 0; text-decoration: none;"
     },
     {
       "name": "ul,li,ol",

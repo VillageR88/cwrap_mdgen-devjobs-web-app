@@ -14,14 +14,32 @@
     {
       "element": "main",
       "style": "display: flex; flex-direction: column; gap: 56px; margin-top: 131px; padding-bottom: 104px; padding-inline: 39px;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "margin-top: 214px; padding-bottom: 64px; padding-inline: 24px;"
+        }
+      ],
       "children": [
         {
           "element": "div",
-          "style": "background-color: var(--main-background-color2); box-sizing: border-box; margin-inline: auto; max-width: 69.375em; padding: 48px 43px 48px 48px; width: 100%;",
+          "style": "background-color: var(--main-background-color2); border-radius: 6px; box-sizing: border-box; margin-inline: auto; max-width: 69.375em; padding: 48px 43px 48px 48px; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "padding-inline: 24px;"
+            }
+          ],
           "children": [
             {
               "element": "div",
               "style": "align-items: center; display: flex; justify-content: space-between; min-height: 87px;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "align-items: unset; flex-direction: column; gap: 50px;"
+                }
+              ],
               "children": [
                 {
                   "element": "div",
@@ -55,6 +73,12 @@
                     {
                       "element": "h2",
                       "style": "color: var(--main-h2-color); font-size: 28px; font-weight: bold; margin-top: 4px;",
+                      "mediaQueries": [
+                        {
+                          "query": "max-width: 768px",
+                          "style": "font-size: 20px;"
+                        }
+                      ],
                       "attributes": {
                         "id": "position"
                       }
@@ -72,6 +96,12 @@
                   "element": "button",
                   "text": "Apply Now",
                   "style": "background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; font-family: 'Kumbh Sans', sans-serif; font-size: 16px; font-weight: bold; max-width: 141px; min-height: 48px; width: 100%;",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "max-width: unset;"
+                    }
+                  ],
                   "extend": [
                     {
                       "extension": ":hover",
@@ -95,7 +125,7 @@
                 {
                   "element": "h3",
                   "text": "Requirements",
-                  "style": "color: var(--main-h2-color);"
+                  "style": "color: var(--main-h2-color); font-size: 20px;"
                 },
                 {
                   "element": "p",
@@ -130,7 +160,7 @@
                 {
                   "element": "h3",
                   "text": "What You Will Do",
-                  "style": "color: var(--main-h2-color);"
+                  "style": "color: var(--main-h2-color); font-size: 20px;"
                 },
                 {
                   "element": "p",
@@ -169,10 +199,22 @@
         {
           "element": "div",
           "style": "align-items: center; box-sizing: border-box; display: flex; justify-content: space-between; margin-inline: auto; max-width: 69.375em; padding: 24px 48px; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "padding-inline: 24px;"
+            }
+          ],
           "children": [
             {
               "element": "section",
               "style": "display: flex; flex-direction: column; gap: 12px;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "display: none;"
+                }
+              ],
               "children": [
                 {
                   "element": "h2",
@@ -194,6 +236,12 @@
               "element": "button",
               "text": "Apply Now",
               "style": "background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; font-family: 'Kumbh Sans', sans-serif; font-size: 16px; font-weight: bold; max-width: 141px; min-height: 48px; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "max-width: unset;"
+                }
+              ],
               "extend": [
                 {
                   "extension": ":hover",

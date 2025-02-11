@@ -92,14 +92,32 @@
             {
                 "element": "nav",
                 "style": "background-color: #5964E0; border-bottom-left-radius: 100px; height: 10.125em; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "border-bottom-left-radius: unset; box-sizing: border-box;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "div",
                         "style": "background: url('{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/bg-pattern-header.svg') left no-repeat; background-color: #5964E0; background-size: cover; border-bottom-left-radius: 100px; box-sizing: border-box; display: flex; height: 100%; justify-content: space-between; margin-inline: auto; max-width: 90rem; width: 100%;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "border-bottom-left-radius: unset;"
+                            }
+                        ],
                         "children": [
                             {
                                 "element": "div",
                                 "style": "display: flex; justify-content: space-between; margin-inline: auto; max-width: 69.375em; padding-inline: 39px; padding-top: 44px; position: relative; width: 100%;",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "padding-inline: 24px;"
+                                    }
+                                ],
                                 "children": [
                                     {
                                         "element": "cwrap-template",
@@ -182,12 +200,16 @@
             {
                 "element": "label",
                 "style": "align-items: center; display: flex; gap: 16px; max-width: 463px; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "max-width: unset;"
+                    }
+                ],
                 "children": [
                     {
-                        "element": "img",
-                        "attributes": {
-                            "src": "{{return cwrapRoute !== '' ? '../' : './'}}static/images/desktop/icon-search.svg"
-                        }
+                        "element": "cwrap-template",
+                        "text": "cwrapTemplate[searchIcon(searchIcon768Style=display: none;)]"
                     },
                     {
                         "element": "input",
@@ -195,6 +217,7 @@
                         "attributes": {
                             "id": "search-item",
                             "placeholder": "Filter by title, companies, expertise…",
+                            "style": "text-overflow: ellipsis; white-space: nowrap; overflow: hidden;",
                             "autocomplete": "off"
                         }
                     }
@@ -203,6 +226,12 @@
             {
                 "element": "label",
                 "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 302px; padding-left: 23px; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "display: none;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "img",
@@ -216,6 +245,7 @@
                         "attributes": {
                             "id": "search-location",
                             "placeholder": "Filter by location…",
+                            "style": "text-overflow: ellipsis; white-space: nowrap; overflow: hidden;",
                             "autocomplete": "off"
                         }
                     }
@@ -224,6 +254,12 @@
             {
                 "element": "label",
                 "style": "align-items: center; border-left: 1px solid rgba(110, 128, 152, 0.2); display: flex; gap: 16px; max-width: 206px; padding-left: 32px; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "display: none;"
+                    }
+                ],
                 "extend": [
                     {
                         "extension": ":has(input:checked) > div",
@@ -261,14 +297,47 @@
                     {
                         "element": "p",
                         "style": "font-weight: bold; color: var(--main-h2-color);",
-                        "text": "Full Time Only"
+                        "text": "Full Time cwrapSpan",
+                        "children": [
+                            {
+                                "element": "span",
+                                "text": "Only",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 1024px",
+                                        "style": "display: none;"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
             {
                 "element": "button",
-                "text": "Search",
                 "style": "align-items: center; align-self: center; background-color: #5964E0; border: none; border-radius: 5px; color: white; cursor: pointer; display: flex; font-family: 'Kumbh Sans', serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 123px; min-height: 48px; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "max-width: 48px;"
+                    }
+                ],
+                "children": [
+                    {
+                        "element": "span",
+                        "text": "Search",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "display: none;"
+                            }
+                        ]
+                    },
+                    {
+                        "element": "cwrap-template",
+                        "text": "cwrapTemplate[searchIcon(searchIconDefaultStyle=display: none; fill: white;,searchIcon768Style=display: flex; width: 20px; height: 20px;)]"
+                    }
+                ],
                 "attributes": {
                     "id": "search"
                 },
@@ -285,6 +354,12 @@
         "element": "div",
         "name": "navCompany",
         "style": "align-items: stretch; background-color: var(--main-background-color2); border-radius: 0 6px 6px 6px; bottom: -99px; box-sizing: border-box; display: flex; min-height: 140px;  position: absolute; width: calc(100% - 4.9em);",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "min-height: 205px; bottom: -190px; flex-direction: column; align-items: center; padding-top: 44px; text-align: center; width: calc(100% - 3em);"
+            }
+        ],
         "attributes": {
             "id": "nav-company"
         },
@@ -292,10 +367,22 @@
             {
                 "element": "div",
                 "style": "align-items: center; justify-content: center; display: flex; max-width: 140px; width: 100%;  border-radius: 0 0 0 6px; transition: unset;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "position: absolute; left: calc(50% - 25px); max-width: unset; height: 50px; width: 50px; border-radius: 15px; top: -25px;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "img",
-                        "style": "transform: scale(2);"
+                        "style": "transform: scale(2);",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "transform: unset;"
+                            }
+                        ]
                     }
                 ]
             },
@@ -305,7 +392,13 @@
                 "children": [
                     {
                         "element": "h2",
-                        "style": "color: var(--main-h2-color);"
+                        "style": "color: var(--main-h2-color);",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "font-size: 20px;"
+                            }
+                        ]
                     },
                     {
                         "element": "p",
@@ -322,7 +415,39 @@
                         "extension": ":hover",
                         "style": "background-color: var(--main-background-color3-hover);"
                     }
+                ],
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "margin-inline: unset; margin-top: 24px;"
+                    }
                 ]
+            }
+        ]
+    },
+    {
+        "element": "svg",
+        "name": "searchIcon",
+        "style": "cwrapProperty[searchIconDefaultStyle=fill: #5964E0;]",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[searchIcon768Style=cwrapOmit]"
+            }
+        ],
+        "attributes": {
+            "width": "24",
+            "viewBox": "0 0 24 24",
+            "height": "24",
+            "xmlns": "http://www.w3.org/2000/svg"
+        },
+        "children": [
+            {
+                "element": "path",
+                "attributes": {
+                    "d": "M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z",
+                    "fill-rule": "nonzero"
+                }
             }
         ]
     }

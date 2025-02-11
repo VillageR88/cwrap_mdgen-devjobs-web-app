@@ -13,7 +13,7 @@
   "passover": [
     {
       "element": "main",
-      "style": "display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;",
+      "style": "box-sizing: border-box; display: flex; flex-direction: column; gap: 56px; padding-bottom: 104px; padding-inline: 39px;",
       "children": [
         {
           "element": "ul",
@@ -21,7 +21,7 @@
           "extend": [
             {
               "extension": "> li",
-              "style": "background-color: var(--main-background-color2); border-radius: 6px; min-height: 228px; width: 100%;"
+              "style": "background-color: var(--main-background-color2); border-radius: 6px; box-sizing: border-box; min-height: 228px; width: 100%;"
             },
             {
               "extension": "> li > div",
@@ -58,6 +58,32 @@
             {
               "extension": "> li > div > p:nth-of-type(2)",
               "style": "color: #5964E0; font-size: 14px; font-weight: bold; margin-top: auto;"
+            }
+          ],
+          "mediaQueries": [
+            {
+              "query": "max-width: 1024px",
+              "style": "gap: 65px 20px;",
+              "extend": [
+                {
+                  "extension": "> li",
+                  "style": "min-height: 253px;"
+                },
+                {
+                  "extension": "> li > div",
+                  "style": "box-sizing: border-box; padding: 49px 9px 32px 32px;"
+                }
+              ]
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "display: flex; flex-direction: column;",
+              "extend": [
+                {
+                  "extension": "> li > div",
+                  "style": "min-height: 253px;"
+                }
+              ]
             }
           ]
         },
