@@ -12,7 +12,6 @@ async function fetchJobDetails(): Promise<DataJson | undefined> {
 
 fetchJobDetails().then((job) => {
 	if (job) {
-		console.log(job);
 		const main = document.querySelector("main") as HTMLElement;
 
 		// Set style of the first child div of navCompany

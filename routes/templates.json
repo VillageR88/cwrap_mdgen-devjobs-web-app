@@ -4,7 +4,8 @@
         "style": "height: fit-content;",
         "name": "logo",
         "attributes": {
-            "href": "{{return cwrapRoute !== '' ? '../' : './'}}"
+            "href": "{{return cwrapRoute !== '' ? '../' : './'}}",
+            "aria-label": "Logo"
         },
         "children": [
             {
@@ -87,15 +88,15 @@
     {
         "element": "body",
         "name": "body",
-        "style": "background-color: var(--main-background-color); box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Kumbh Sans', serif; margin: 0; min-height: 100dvh;",
+        "style": "background-color: var(--main-background-color); box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Kumbh Sans', serif; margin: 0; min-height: 100dvh; padding-top: calc(10.125em + 1rem);",
         "children": [
             {
                 "element": "nav",
-                "style": "background-color: #5964E0; border-bottom-left-radius: 100px; height: 10.125em; width: 100%;",
+                "style": "background-color: #5964E0; border-bottom-left-radius: 100px; height: 10.125em; width: 100%; position: fixed; top: 0; z-index: 2;",
                 "mediaQueries": [
                     {
                         "query": "max-width: 768px",
-                        "style": "border-bottom-left-radius: unset; box-sizing: border-box;"
+                        "style": "border-bottom-left-radius: unset; box-sizing: border-box; position: absolute;"
                     }
                 ],
                 "children": [
@@ -134,6 +135,9 @@
                                             {
                                                 "element": "label",
                                                 "style": "align-items: center; background-color: white; border-radius: 12px; cursor: pointer; display: flex; height: fit-content; justify-content: center; max-width: 48px; min-height: 24px; width: 100%;",
+                                                "attributes": {
+                                                    "for": "theme-switcher"
+                                                },
                                                 "extend": [
                                                     {
                                                         "extension": ":hover > input:nth-of-type(1)",
@@ -146,7 +150,8 @@
                                                         "style": "appearance: none; background-color: #5964E0; border: none; border-radius: 50%; cursor: pointer; height: 14px; margin: 0; transform: translateX(-12px); transition: transform 300ms, background-color 300ms; width: 14px;",
                                                         "attributes": {
                                                             "type": "checkbox",
-                                                            "id": "theme-switcher"
+                                                            "id": "theme-switcher",
+                                                            "aria-label": "Theme switcher"
                                                         },
                                                         "extend": [
                                                             {
@@ -241,7 +246,8 @@
                 "element": "button",
                 "style": "display: none; margin:0; padding:0;",
                 "attributes": {
-                    "id": "filter"
+                    "id": "filter",
+                    "aria-label": "Filter"
                 },
                 "mediaQueries": [
                     {
@@ -282,12 +288,23 @@
                     }
                 ],
                 "attributes": {
-                    "id": "search"
+                    "id": "search",
+                    "aria-label": "Search button"
                 },
                 "extend": [
                     {
                         "extension": ":hover",
                         "style": "background-color: #939BF4;"
+                    }
+                ]
+            },
+            {
+                "element": "div",
+                "style": " position: absolute; left:0; width: 100%; height: 1.2em; bottom: -0.7em; background-color: var(--main-background-color); z-index: -1;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "display:none;"
                     }
                 ]
             }
@@ -300,7 +317,7 @@
         "mediaQueries": [
             {
                 "query": "max-width: 768px",
-                "style": "min-height: 205px; bottom: -190px; flex-direction: column; align-items: center; padding-top: 44px; text-align: center; width: calc(100% - 3em);"
+                "style": "min-height: 205px; bottom: -190px; flex-direction: column; align-items: center; padding-top: 44px; text-align: center; width: calc(100% - 3em); border-radius: 6px;"
             }
         ],
         "attributes": {
@@ -366,6 +383,16 @@
                     {
                         "query": "max-width: 768px",
                         "style": "margin-inline: unset; margin-top: 24px;"
+                    }
+                ]
+            },
+            {
+                "element": "div",
+                "style": " position: absolute; left:0; width: 100%; height: 1.2em; bottom: -0.7em; background-color: var(--main-background-color); z-index: -1;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "display:none;"
                     }
                 ]
             }

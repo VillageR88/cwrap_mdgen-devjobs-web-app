@@ -44,8 +44,6 @@ filterButton.addEventListener("click", () => {
 let currentIndex = 0;
 const itemsPerPage = 12;
 
-console.log(dataRoute);
-
 search.addEventListener("click", () => {
 	const searchItemValue = searchItem.value.toLowerCase();
 	const searchLocationValue = searchLocation.value.toLowerCase();
@@ -141,6 +139,7 @@ function displayItems(data: DataJson[]) {
 
 		const logoImg = document.createElement("img");
 		logoImg.setAttribute("src", item.logo);
+		logoImg.setAttribute("alt", `${item.company} logo`);
 		logoBackgroundDiv.appendChild(logoImg);
 
 		itemContainerInner.insertBefore(
